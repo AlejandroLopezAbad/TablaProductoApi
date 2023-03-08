@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alexitto.tablaproductosapi.controller.Controller">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tabla de Producto" />
+      <HBox alignment="CENTER" prefHeight="401.0" prefWidth="600.0">
+         <children>
+            <VBox VBox.vgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="tableId" prefHeight="450.0" minWidth="300.0" >
+                    <columns>
+                        <TableColumn fx:id="columnId" prefWidth="45.0" text="ID" />
+                      <TableColumn fx:id="columnCategory" prefWidth="75.0" text="Categoria" />
+                      <TableColumn fx:id="columnName" prefWidth="75.0" text="Nombre" />
+                        <TableColumn fx:id="ColumnPrecio" prefWidth="83.0" text="Precio" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="buttonRecargar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#refreshTable" text="Recargar Tabla" />
+                  <PieChart fx:id="grapicaId" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Text fx:id="textoCategoria" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoría" wrappingWidth="415.21630859375">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="textFieldCategoria" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+                  <TextField fx:id="textFieldNombre" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
+                  <TextField fx:id="textFieldPrecio" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción" />
+                  <TextArea fx:id="textAreaDescripcion" prefHeight="800.0" prefWidth="800.0" />
+                  <Text fx:id="loading" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="399.21630859375" />
+                  <ImageView fx:id="imagenProduct" fitHeight="349.0" fitWidth="414.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
