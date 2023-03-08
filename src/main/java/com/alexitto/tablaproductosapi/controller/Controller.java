@@ -79,15 +79,13 @@ public class Controller {
     }
 
     private void loadImage(String image) {
-       new Thread(()-> {
+        new Thread(() -> {
             imagenProduct.setImage(null);
             loading.setText("Loading image .....");
             imagenProduct.setImage(new Image(image));
             loading.setText("");
         }).start();
     }
-
-
 
 
     @FXML
@@ -135,8 +133,6 @@ public class Controller {
         });
 
     }
-
-
 
 
     private void fillTable(HttpResponse<String> response) {

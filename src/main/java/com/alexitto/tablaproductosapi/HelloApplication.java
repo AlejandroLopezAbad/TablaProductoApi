@@ -6,13 +6,17 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("tabla-view.fxml"));
+        Locale.setDefault(Locale.getDefault());
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("/i18n/spanish");
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("tabla-view.fxml"),resourceBundle);
         Scene scene = new Scene(fxmlLoader.load(), 840, 740);
-        stage.setTitle("Hello!");
+        stage.setTitle("Tabla Producto Api");
         stage.setScene(scene);
         stage.show();
     }

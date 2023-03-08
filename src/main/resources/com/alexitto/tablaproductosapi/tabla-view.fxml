@@ -19,31 +19,31 @@
          <children>
             <VBox VBox.vgrow="ALWAYS">
                <children>
-                  <TableView fx:id="tableId" prefHeight="450.0" minWidth="300.0" >
+                  <TableView fx:id="tableId" prefHeight="450.0" minWidth="295.0">
                     <columns>
-                        <TableColumn fx:id="columnId" prefWidth="45.0" text="ID" />
-                      <TableColumn fx:id="columnCategory" prefWidth="75.0" text="Categoria" />
-                      <TableColumn fx:id="columnName" prefWidth="75.0" text="Nombre" />
-                        <TableColumn fx:id="ColumnPrecio" prefWidth="83.0" text="Precio" />
+                        <TableColumn fx:id="columnId" prefWidth="45.0" text="%id" />
+                      <TableColumn fx:id="columnCategory" prefWidth="75.0" text="%categoria" />
+                      <TableColumn fx:id="columnName" prefWidth="75.0" text="%nombre" />
+                        <TableColumn fx:id="ColumnPrecio" prefWidth="83.0" text="%precio" />
                     </columns>
                   </TableView>
-                  <Button fx:id="buttonRecargar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#refreshTable" text="Recargar Tabla" />
+                  <Button fx:id="buttonRecargar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#refreshTable" text="%recargar" />
                   <PieChart fx:id="grapicaId" />
                </children>
             </VBox>
             <VBox>
                <children>
-                  <Text fx:id="textoCategoria" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoría" wrappingWidth="415.21630859375">
+                  <Text fx:id="textoCategoria" strokeType="OUTSIDE" strokeWidth="0.0" text="%categoria" wrappingWidth="415.21630859375">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
                   </Text>
                   <TextField fx:id="textFieldCategoria" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%nombre" />
                   <TextField fx:id="textFieldNombre" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%precio" />
                   <TextField fx:id="textFieldPrecio" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%descripción" />
                   <TextArea fx:id="textAreaDescripcion" prefHeight="800.0" prefWidth="800.0" />
                   <Text fx:id="loading" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="399.21630859375" />
                   <ImageView fx:id="imagenProduct" fitHeight="349.0" fitWidth="414.0" pickOnBounds="true" preserveRatio="true" />
